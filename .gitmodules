@@ -4,3 +4,9 @@
 [submodule "source"]
 	path = source
 	url = ../simple-source
+[submodule "operating_system"]
+	path = operating_system
+	url = ../windows-operating_system
+[submodule "port"]
+	path = port
+	url = ../windows-port
