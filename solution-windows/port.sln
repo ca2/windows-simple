@@ -19,6 +19,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "archive", "..\port\base\arc
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "iconv", "..\port\base\iconv\iconv.vcxproj", "{7CFB99A0-47A8-4485-BEFF-3D0104D66509}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "unac", "..\port\base\unac\unac.vcxproj", "{7C73E63A-78B3-40C4-87FD-EBF23EA67925}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -159,6 +161,22 @@ Global
 		{7CFB99A0-47A8-4485-BEFF-3D0104D66509}.StaticRelease|Win32.Build.0 = StaticRelease|Win32
 		{7CFB99A0-47A8-4485-BEFF-3D0104D66509}.StaticRelease|x64.ActiveCfg = StaticRelease|x64
 		{7CFB99A0-47A8-4485-BEFF-3D0104D66509}.StaticRelease|x64.Build.0 = StaticRelease|x64
+		{7C73E63A-78B3-40C4-87FD-EBF23EA67925}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7C73E63A-78B3-40C4-87FD-EBF23EA67925}.Debug|Win32.Build.0 = Debug|Win32
+		{7C73E63A-78B3-40C4-87FD-EBF23EA67925}.Debug|x64.ActiveCfg = Debug|x64
+		{7C73E63A-78B3-40C4-87FD-EBF23EA67925}.Debug|x64.Build.0 = Debug|x64
+		{7C73E63A-78B3-40C4-87FD-EBF23EA67925}.Release|Win32.ActiveCfg = Release|Win32
+		{7C73E63A-78B3-40C4-87FD-EBF23EA67925}.Release|Win32.Build.0 = Release|Win32
+		{7C73E63A-78B3-40C4-87FD-EBF23EA67925}.Release|x64.ActiveCfg = Release|x64
+		{7C73E63A-78B3-40C4-87FD-EBF23EA67925}.Release|x64.Build.0 = Release|x64
+		{7C73E63A-78B3-40C4-87FD-EBF23EA67925}.StaticDebug|Win32.ActiveCfg = StaticDebug|Win32
+		{7C73E63A-78B3-40C4-87FD-EBF23EA67925}.StaticDebug|Win32.Build.0 = StaticDebug|Win32
+		{7C73E63A-78B3-40C4-87FD-EBF23EA67925}.StaticDebug|x64.ActiveCfg = StaticDebug|x64
+		{7C73E63A-78B3-40C4-87FD-EBF23EA67925}.StaticDebug|x64.Build.0 = StaticDebug|x64
+		{7C73E63A-78B3-40C4-87FD-EBF23EA67925}.StaticRelease|Win32.ActiveCfg = StaticRelease|Win32
+		{7C73E63A-78B3-40C4-87FD-EBF23EA67925}.StaticRelease|Win32.Build.0 = StaticRelease|Win32
+		{7C73E63A-78B3-40C4-87FD-EBF23EA67925}.StaticRelease|x64.ActiveCfg = StaticRelease|x64
+		{7C73E63A-78B3-40C4-87FD-EBF23EA67925}.StaticRelease|x64.Build.0 = StaticRelease|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

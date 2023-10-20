@@ -62,8 +62,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "database_sqlite3", "..\sour
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "experience_core", "..\source\app\experience_core\experience_core.vcxproj", "{E2D7833B-9B59-4826-BBDF-C270A2115E86}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "draw2d_opengl", "..\source\app\draw2d_opengl\draw2d_opengl.vcxproj", "{A6371632-E343-445C-88EE-ED786D5EA47F}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		cover|Win32 = cover|Win32
@@ -557,24 +555,6 @@ Global
 		{E2D7833B-9B59-4826-BBDF-C270A2115E86}.StaticRelease|Win32.Build.0 = StaticRelease|Win32
 		{E2D7833B-9B59-4826-BBDF-C270A2115E86}.StaticRelease|x64.ActiveCfg = StaticRelease|x64
 		{E2D7833B-9B59-4826-BBDF-C270A2115E86}.StaticRelease|x64.Build.0 = StaticRelease|x64
-		{A6371632-E343-445C-88EE-ED786D5EA47F}.cover|Win32.ActiveCfg = Debug|Win32
-		{A6371632-E343-445C-88EE-ED786D5EA47F}.cover|x64.ActiveCfg = Debug|x64
-		{A6371632-E343-445C-88EE-ED786D5EA47F}.Debug|Win32.ActiveCfg = Debug|Win32
-		{A6371632-E343-445C-88EE-ED786D5EA47F}.Debug|Win32.Build.0 = Debug|Win32
-		{A6371632-E343-445C-88EE-ED786D5EA47F}.Debug|x64.ActiveCfg = Debug|x64
-		{A6371632-E343-445C-88EE-ED786D5EA47F}.Debug|x64.Build.0 = Debug|x64
-		{A6371632-E343-445C-88EE-ED786D5EA47F}.Release|Win32.ActiveCfg = Release|Win32
-		{A6371632-E343-445C-88EE-ED786D5EA47F}.Release|Win32.Build.0 = Release|Win32
-		{A6371632-E343-445C-88EE-ED786D5EA47F}.Release|x64.ActiveCfg = Release|x64
-		{A6371632-E343-445C-88EE-ED786D5EA47F}.Release|x64.Build.0 = Release|x64
-		{A6371632-E343-445C-88EE-ED786D5EA47F}.StaticDebug|Win32.ActiveCfg = StaticDebug|Win32
-		{A6371632-E343-445C-88EE-ED786D5EA47F}.StaticDebug|Win32.Build.0 = StaticDebug|Win32
-		{A6371632-E343-445C-88EE-ED786D5EA47F}.StaticDebug|x64.ActiveCfg = StaticDebug|x64
-		{A6371632-E343-445C-88EE-ED786D5EA47F}.StaticDebug|x64.Build.0 = StaticDebug|x64
-		{A6371632-E343-445C-88EE-ED786D5EA47F}.StaticRelease|Win32.ActiveCfg = StaticRelease|Win32
-		{A6371632-E343-445C-88EE-ED786D5EA47F}.StaticRelease|Win32.Build.0 = StaticRelease|Win32
-		{A6371632-E343-445C-88EE-ED786D5EA47F}.StaticRelease|x64.ActiveCfg = StaticRelease|x64
-		{A6371632-E343-445C-88EE-ED786D5EA47F}.StaticRelease|x64.Build.0 = StaticRelease|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
