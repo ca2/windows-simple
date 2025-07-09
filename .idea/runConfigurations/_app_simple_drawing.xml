@@ -1,0 +1,7 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="_app_simple_drawing" type="CMakeRunConfiguration" factoryName="Application" folderName="drawing" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="app-simple" TARGET_NAME="_app_simple_drawing" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="app-simple" RUN_TARGET_NAME="_app_simple_drawing">
+    <method v="2">
+      <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+    </method>
+  </configuration>
+</component>
