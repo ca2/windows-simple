@@ -1,15 +1,9 @@
-[submodule "operating-system"]
-	path = operating-system
-	url = ../windows-operating-system
-[submodule "source"]
-	path = source
-	url = ../simple-source
 [submodule "operating_system"]
 	path = operating_system
 	url = ../windows-operating_system
-[submodule "ort"]
-	path = ort
-	url = ../windows-port
 [submodule "port"]
 	path = port
 	url = ../windows-port
+[submodule "source"]
+	path = source
+	url = ../simple-source
