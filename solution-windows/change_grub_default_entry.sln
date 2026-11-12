@@ -61,6 +61,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "app_simple_change_grub_defa
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "_app_simple_change_grub_default_entry", "..\source\app-simple\change_grub_default_entry\__implement\_app_simple_change_grub_default_entry.vcxproj", "{24AF1CE4-53C2-479D-803B-FCAD71694F85}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gdiplus_library", "..\operating_system\operating_system-windows\gdiplus_library\gdiplus_library.vcxproj", "{C70AA9E7-1EDA-404E-92EE-DCFF6AE4F54A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		cover|Win32 = cover|Win32
@@ -891,6 +893,34 @@ Global
 		{24AF1CE4-53C2-479D-803B-FCAD71694F85}.StaticRelease|Win32.Build.0 = Release|Win32
 		{24AF1CE4-53C2-479D-803B-FCAD71694F85}.StaticRelease|x64.ActiveCfg = Release|x64
 		{24AF1CE4-53C2-479D-803B-FCAD71694F85}.StaticRelease|x64.Build.0 = Release|x64
+		{C70AA9E7-1EDA-404E-92EE-DCFF6AE4F54A}.cover|Win32.ActiveCfg = Debug|Win32
+		{C70AA9E7-1EDA-404E-92EE-DCFF6AE4F54A}.cover|Win32.Build.0 = Debug|Win32
+		{C70AA9E7-1EDA-404E-92EE-DCFF6AE4F54A}.cover|x64.ActiveCfg = DebugWithInlOpt|x64
+		{C70AA9E7-1EDA-404E-92EE-DCFF6AE4F54A}.cover|x64.Build.0 = DebugWithInlOpt|x64
+		{C70AA9E7-1EDA-404E-92EE-DCFF6AE4F54A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{C70AA9E7-1EDA-404E-92EE-DCFF6AE4F54A}.Debug|Win32.Build.0 = Debug|Win32
+		{C70AA9E7-1EDA-404E-92EE-DCFF6AE4F54A}.Debug|x64.ActiveCfg = Debug|x64
+		{C70AA9E7-1EDA-404E-92EE-DCFF6AE4F54A}.Debug|x64.Build.0 = Debug|x64
+		{C70AA9E7-1EDA-404E-92EE-DCFF6AE4F54A}.Release|Win32.ActiveCfg = Release|Win32
+		{C70AA9E7-1EDA-404E-92EE-DCFF6AE4F54A}.Release|Win32.Build.0 = Release|Win32
+		{C70AA9E7-1EDA-404E-92EE-DCFF6AE4F54A}.Release|x64.ActiveCfg = Release|x64
+		{C70AA9E7-1EDA-404E-92EE-DCFF6AE4F54A}.Release|x64.Build.0 = Release|x64
+		{C70AA9E7-1EDA-404E-92EE-DCFF6AE4F54A}.StaticDebug|Win32.ActiveCfg = StaticDebug|Win32
+		{C70AA9E7-1EDA-404E-92EE-DCFF6AE4F54A}.StaticDebug|Win32.Build.0 = StaticDebug|Win32
+		{C70AA9E7-1EDA-404E-92EE-DCFF6AE4F54A}.StaticDebug|x64.ActiveCfg = StaticDebug|x64
+		{C70AA9E7-1EDA-404E-92EE-DCFF6AE4F54A}.StaticDebug|x64.Build.0 = StaticDebug|x64
+		{C70AA9E7-1EDA-404E-92EE-DCFF6AE4F54A}.StaticMetaDebug|Win32.ActiveCfg = StaticMetaDebug|Win32
+		{C70AA9E7-1EDA-404E-92EE-DCFF6AE4F54A}.StaticMetaDebug|Win32.Build.0 = StaticMetaDebug|Win32
+		{C70AA9E7-1EDA-404E-92EE-DCFF6AE4F54A}.StaticMetaDebug|x64.ActiveCfg = StaticMetaDebug|x64
+		{C70AA9E7-1EDA-404E-92EE-DCFF6AE4F54A}.StaticMetaDebug|x64.Build.0 = StaticMetaDebug|x64
+		{C70AA9E7-1EDA-404E-92EE-DCFF6AE4F54A}.StaticMetaRelease|Win32.ActiveCfg = StaticMetaRelease|Win32
+		{C70AA9E7-1EDA-404E-92EE-DCFF6AE4F54A}.StaticMetaRelease|Win32.Build.0 = StaticMetaRelease|Win32
+		{C70AA9E7-1EDA-404E-92EE-DCFF6AE4F54A}.StaticMetaRelease|x64.ActiveCfg = StaticMetaRelease|x64
+		{C70AA9E7-1EDA-404E-92EE-DCFF6AE4F54A}.StaticMetaRelease|x64.Build.0 = StaticMetaRelease|x64
+		{C70AA9E7-1EDA-404E-92EE-DCFF6AE4F54A}.StaticRelease|Win32.ActiveCfg = StaticRelease|Win32
+		{C70AA9E7-1EDA-404E-92EE-DCFF6AE4F54A}.StaticRelease|Win32.Build.0 = StaticRelease|Win32
+		{C70AA9E7-1EDA-404E-92EE-DCFF6AE4F54A}.StaticRelease|x64.ActiveCfg = StaticRelease|x64
+		{C70AA9E7-1EDA-404E-92EE-DCFF6AE4F54A}.StaticRelease|x64.Build.0 = StaticRelease|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
