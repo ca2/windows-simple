@@ -33,6 +33,8 @@ The nested shell checks the top-level checkout’s configured `origin` URL after
 
 ## Build the Git Bash launcher
 
+The checkout already includes a Release x64 `shell.exe`. Open it to start the installed Git Bash in this checkout and run `tool/shell`. Rebuild the launcher when its native code changes.
+
 The standalone launcher project is under `operating_system/operating_system-windows/_tool/shell/`. Open `shell.vcxproj` in Visual Studio and select Debug or Release and a target platform. For CMake, use an x64 Developer PowerShell with CMake and Ninja on `PATH`.
 
 ```powershell
@@ -43,7 +45,7 @@ cmake --build --preset x64-debug
 
 Use the `x64-release` preset for Release. For another CMake target architecture, start a developer shell for that target and set the Ninja build directory with `-B` under `time-windows/intermediate/<architecture>/<configuration>/shell/cmake`. Pass the same configuration as `-DCMAKE_BUILD_TYPE`. The build paths use `x86`, `x64`, or `arm64`.
 
-Both builds write `time-windows/<architecture>/<configuration>/shell.exe` and copy it to `shell.exe` at the checkout root. Open the root copy to start the installed Git Bash window in this checkout and run `tool/shell`.
+Both builds write `time-windows/<architecture>/<configuration>/shell.exe` and copy it to `shell.exe` at the checkout root. Use the Release x64 build when updating the checked-in executable.
 
 ## Build and verify
 
