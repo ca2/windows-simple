@@ -7,3 +7,7 @@
 [submodule "source"]
 	path = source
 	url = ../simple-source
+[submodule "tool"]
+	path = tool
+	url = ../windows-tool
+	branch = main
