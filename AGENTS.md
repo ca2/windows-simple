@@ -29,6 +29,8 @@ The MSBuild pre-build events call `application_build_helper` by name. In Develop
 
 In Git Bash, run `tool/shell` from the repository root. It delegates to `operating_system/operating_system-windows/tool/shell`, which prepends the nested tool checkout’s absolute `bin/` and `bin/<architecture>/` paths to `PATH`, in that order. Use `command -v application_build_helper` to check the selected helper, and `exit` to return to the original shell.
 
+Run `. ./tool/shell` from the repository root to apply the same setup to your current Git Bash session.
+
 The nested shell checks the top-level checkout’s configured `origin` URL after updating `PATH`. For an SSH origin, it sources the bundled `defer_ssh_agent` before opening the interactive Bash session. HTTPS origins skip this step. The same check applies through `shell.exe`. If an HTTPS checkout has a submodule that requires SSH, run `. "$(command -v defer_ssh_agent)"` inside the new shell to initialize the agent on demand. Use `ssh-add -l` to check the loaded identities.
 
 ## Build the Git Bash launcher

@@ -1,10 +1,20 @@
 #!/usr/bin/env bash
 
-checkout=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd -P) || exit 1
-shell_script="$checkout/operating_system/operating_system-windows/tool/shell"
-if [[ ! -f "$shell_script" ]]; then
-    printf '%s\n' 'The Windows tool submodule is missing. Run git submodule update --init --recursive.' >&2
-    exit 1
-fi
+ca2_run_workspace_shell() {
+    unset -f ca2_run_workspace_shell
+    local checkout shell_script
+    checkout=$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd -P) || return 1
+    shell_script="$checkout/operating_system/operating_system-windows/tool/shell"
+    if [[ ! -f "$shell_script" ]]; then
+        printf '%s\n' 'The Windows tool submodule is missing. Run git submodule update --init --recursive.' >&2
+        return 1
+    fi
 
-exec bash "$shell_script" "$@"
+    if [[ ${BASH_SOURCE[0]} != "$0" ]]; then
+        . "$shell_script" "$@"
+    else
+        exec bash "$shell_script" "$@"
+    fi
+}
+
+ca2_run_workspace_shell "$@"
