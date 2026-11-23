@@ -7,7 +7,8 @@
 | `operating_system/` | `ca2/windows-operating_system` | Windows platform integrations, shared MSBuild property sheets, and nested Windows and Windows-common sources |
 | `port/` | `ca2/windows-port` | Third-party library ports and their nested dependencies |
 | `source/` | `ca2/simple-source` | ca2 framework and Simple application sources, including nested repositories |
-| `tool/` | `ca2/windows-tool` | Windows utilities and build helpers |
+
+The Windows platform submodule pins `ca2/windows-tool` at `operating_system/operating_system-windows/tool/`. The root `tool/` directory contains the shell launcher.
 
 ## Set up the workspace
 
@@ -26,9 +27,9 @@ The current MSBuild property sheets also reference a sibling `../operating_syste
 
 The MSBuild pre-build events call `application_build_helper` by name. In Developer PowerShell, use `Get-Command application_build_helper` to check which copy is on `PATH`. The existing build environment uses the copy under `../operating_system/tool/bin/x64/`.
 
-In Git Bash, run `tool/shell` from the repository root to open an interactive shell with absolute paths to `tool/bin` and `tool/bin/<architecture>` prepended to `PATH`, in that order. Use `command -v application_build_helper` to check the selected helper, and `exit` to return to the original shell.
+In Git Bash, run `tool/shell` from the repository root. It delegates to `operating_system/operating_system-windows/tool/shell`, which prepends the nested tool checkout’s absolute `bin/` and `bin/<architecture>/` paths to `PATH`, in that order. Use `command -v application_build_helper` to check the selected helper, and `exit` to return to the original shell.
 
-`tool/shell` sources `tool/bin/defer_ssh_agent` after updating `PATH` and before opening the interactive Bash session. This also runs when launched through `shell.exe`. Use `ssh-add -l` inside the new shell to check which identities the agent has loaded.
+The nested shell checks the top-level checkout’s configured `origin` URL after updating `PATH`. For an SSH origin, it sources the bundled `defer_ssh_agent` before opening the interactive Bash session. HTTPS origins skip this step. The same check applies through `shell.exe`. If an HTTPS checkout has a submodule that requires SSH, run `. "$(command -v defer_ssh_agent)"` inside the new shell to initialize the agent on demand. Use `ssh-add -l` to check the loaded identities.
 
 ## Build the Git Bash launcher
 
@@ -55,6 +56,8 @@ msbuild .\solution-windows\simple.sln /m /p:Configuration=Debug /p:Platform=x64
 The solution includes the Simple Drawing launcher. After a successful build, run `time-windows/x64/Debug/_app_simple_drawing.exe` and check that its window opens and renders. The default intermediate directory is `time-windows/intermediate/`.
 
 `solution-windows/port.sln` contains the Visual Studio projects for the ports. The root `CMakeLists.txt` is a separate entry point that delegates configuration to `source/app/_.cmake`. Its helper configuration references the ca2 tooling under `$HOME/code/operating_system/tool/`. Use an ignored out-of-source directory such as `cmake-build-windows/` for CMake. On the tested Windows setup, CMake configuration failed during Mbed TLS setup after Python 3 discovery failed, and FreeImage could not find the JPEG headers and library.
+
+On Windows, the shared `source/app/_.cmake` setup runs `application_build_helper --defer-prepare-folder` before compiling libraries in each ca2 project directory under `source/` or `operating_system/`. It passes the absolute project source directory, MSBuild platform name, and active build configuration. The helper is normally resolved from `operating_system/operating_system-windows/tool/bin/<host architecture>/`. Set `CA2_PREPARE_FOLDER_HELPER` to override it. CMake keeps its outputs in the selected CMake build tree, with the Windows library and runtime output paths under `library/` and `output/`.
 
 ## Make changes in the owning repository
 
